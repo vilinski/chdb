@@ -24,7 +24,7 @@
     <Authors>vilinski</Authors>
     <Title>chdb tool</Title>
     <Description>clickhouse local cli as a dotnet tool</Description>
-    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/vilinski/chdb</PackageProjectUrl>
     <PackageIconUrl>https://raw.githubusercontent.com/vilinski/chdb/main/chdb.png</PackageIconUrl>
     <PackageTags>clickhouse;chdb</PackageTags>
