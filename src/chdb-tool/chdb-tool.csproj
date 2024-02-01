@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\chdb\chdb.csproj" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <None Include="icon.png" Pack="true" PackagePath="" />
+  </ItemGroup>
+  
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFrameworks>net6.0;net8.0</TargetFrameworks>
+    <RootNamespace>chdb_tool</RootNamespace>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+
+    <PackAsTool>true</PackAsTool>
+    <ToolCommandName>chdb</ToolCommandName>
+    <PackageOutputPath>./nupkg</PackageOutputPath>
+    <PackageId>chdb-tool</PackageId>
+    <AssemblyVersion>0.0.1</AssemblyVersion>
+    <Version>0.0.1</Version>
+    <Authors>vilinski</Authors>
+    <Title>chdb tool</Title>
+    <Description>clickhouse local cli as a dotnet tool</Description>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/vilinski/chdb</PackageProjectUrl>
+    <PackageIconUrl>https://raw.githubusercontent.com/vilinski/chdb/main/chdb.png</PackageIconUrl>
+    <PackageTags>clickhouse;chdb</PackageTags>
+  </PropertyGroup>
+
+</Project>

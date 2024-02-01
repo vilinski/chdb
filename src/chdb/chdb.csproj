@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net6.0;net8.0</TargetFrameworks>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+
+    <PackageOutputPath>./nupkg</PackageOutputPath>
+    <PackageId>chdb</PackageId>
+    <AssemblyVersion>0.0.1</AssemblyVersion>
+    <Version>0.0.1</Version>
+    <Authors>vilinski</Authors>
+    <Title>chdb</Title>
+    <Description>chdb native bindings for dotnet core</Description>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/vilinski/chdb</PackageProjectUrl>
+    <PackageIconUrl>https://raw.githubusercontent.com/vilinski/chdb/main/chdb.png</PackageIconUrl>
+    <PackageTags>clickhouse;chdb</PackageTags>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <None Update="libchdb.so" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="icon.png" Pack="true" PackagePath="" />
+  </ItemGroup>
+</Project>
