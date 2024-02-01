@@ -4,7 +4,7 @@ namespace ChDb;
 
 public record LocalResult(string? Buf, string? ErrorMessage, ulong RowsRead, ulong BytesRead, TimeSpan Elapsed)
 {
-    public LocalResult(Handle h) : this(
+    internal LocalResult(Handle h) : this(
         Marshal.PtrToStringUTF8(h.buf, h.len),
         Marshal.PtrToStringUTF8(h.error_message),
         h.rows_read,
@@ -14,14 +14,14 @@ public record LocalResult(string? Buf, string? ErrorMessage, ulong RowsRead, ulo
     }
 
     [StructLayout(LayoutKind.Sequential)]
-    public class Handle
+    internal class Handle
     {
-        public nint buf;
-        public int len;
-        public nint _vec;
-        public double elapsed;
-        public ulong rows_read;
-        public ulong bytes_read;
-        public nint error_message;
+        internal nint buf;
+        internal int len;
+        internal nint _vec; // std::vector<char> *, for freeing
+        internal double elapsed;
+        internal ulong rows_read;
+        internal ulong bytes_read;
+        internal nint error_message;
     }
 }

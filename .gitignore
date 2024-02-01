@@ -3,6 +3,8 @@
 ##
 ## Get latest from `dotnet new gitignore`
 
+src/chdb/libchdb.so
+
 # dotenv files
 .env
 

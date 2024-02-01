@@ -2,24 +2,24 @@ using System.Runtime.InteropServices;
 
 namespace ChDb;
 
-public static class NativeMethods
+internal static class NativeMethods
 {
     const string __DllName = "libchdb.so";
 
     [DllImport(__DllName, EntryPoint = "query_stable", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-    public static extern IntPtr query_stable(int argc, string[] argv);
+    internal static extern IntPtr query_stable(int argc, string[] argv);
 
     [DllImport(__DllName, EntryPoint = "free_result", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-    public static extern void free_result(IntPtr result);
+    internal static extern void free_result(IntPtr result);
 
     [DllImport(__DllName, EntryPoint = "query_stable_v2", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-    public static extern IntPtr query_stable_v2(int argc, string[] argv);
+    internal static extern IntPtr query_stable_v2(int argc, string[] argv);
 
     [DllImport(__DllName, EntryPoint = "free_result_v2", CallingConvention = CallingConvention.Cdecl, ExactSpelling = true)]
-    public static extern void free_result_v2(IntPtr result);
+    internal static extern void free_result_v2(IntPtr result);
 }
 
-public class ChDb
+public static class ChDb
 {
     public static LocalResult Query(string query, string? format = null)
     {

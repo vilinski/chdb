@@ -17,13 +17,12 @@
     <PackageProjectUrl>https://github.com/vilinski/chdb</PackageProjectUrl>
     <PackageIconUrl>https://raw.githubusercontent.com/vilinski/chdb/main/chdb.png</PackageIconUrl>
     <PackageTags>clickhouse;chdb</PackageTags>
+    <internalsVisibleTo>tests</internalsVisibleTo>
   </PropertyGroup>
-  
-  <ItemGroup>
-    <None Update="libchdb.so" CopyToOutputDirectory="PreserveNewest" />
-  </ItemGroup>
 
   <ItemGroup>
     <None Include="icon.png" Pack="true" PackagePath="" />
+    <None Update="libchdb.so" CopyToOutputDirectory="PreserveNewest" />
   </ItemGroup>
+
 </Project>
